@@ -69,7 +69,7 @@ export interface Note {
 
 export interface Channel {
   name: string;
-  embedUrl: string;
+  channelId: string;
   color: string;
 }
 

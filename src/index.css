@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
 
 @theme {
   --font-sans: "DM Sans", sans-serif;
@@ -21,7 +22,7 @@
   --color-pink: #EC4899;
 
   --animate-pulse-live: pulse-live 2s ease-in-out infinite;
-  --animate-ticker: ticker-scroll 60s linear infinite;
+  --animate-ticker: ticker-scroll 50s linear infinite;
 }
 
 @keyframes pulse-live {
@@ -45,8 +46,8 @@
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
   ::-webkit-scrollbar-track {
     background: var(--color-bg-deep);
@@ -57,5 +58,21 @@
   }
   ::-webkit-scrollbar-thumb:hover {
     background: var(--color-text-dim);
+  }
+
+  /* Leaflet custom tooltips */
+  .monitor-tooltip {
+    background: rgba(11, 17, 33, 0.95) !important;
+    border: 1px solid #1E293B !important;
+    color: #E2E8F0 !important;
+    border-radius: 4px !important;
+    padding: 4px 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+  }
+  .monitor-tooltip::before {
+    border-right-color: #1E293B !important;
+  }
+  .leaflet-container {
+    background: #060B14 !important;
   }
 }

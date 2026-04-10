@@ -14,54 +14,56 @@ import { seedStartupFeeds, seedAiFeeds } from "@/data/seed";
 export function DashboardPage() {
   return (
     <div
-      className="grid gap-3 p-4 min-h-0"
+      className="grid min-h-0"
       style={{
-        gridTemplateColumns: "repeat(4, 1fr)",
-        gridTemplateRows: "auto auto auto auto auto",
+        gap: 6,
+        padding: "6px 8px",
+        gridTemplateColumns: "1.3fr 1fr 0.7fr",
+        gridTemplateRows: "auto auto auto auto",
         gridTemplateAreas: `
-          "map      map      kpi     kpi"
-          "map      map      macro   macro"
-          "startup  aitech   live    live"
-          "agenda   country  reg     reg"
-          "funding  funding  health  notes"
+          "map      kpi       health"
+          "map      macro     notes"
+          "startup  aitech    live"
+          "country  agenda    reg"
+          "funding  funding   funding"
         `,
       }}
     >
-      <div style={{ gridArea: "map" }}>
+      <div style={{ gridArea: "map" }} className="min-h-0">
         <AfricaMapPanel />
       </div>
-      <div style={{ gridArea: "kpi" }}>
+      <div style={{ gridArea: "kpi" }} className="min-h-0">
         <KpiPanel />
       </div>
-      <div style={{ gridArea: "macro" }}>
-        <MacroPanel />
-      </div>
-      <div style={{ gridArea: "startup" }}>
-        <FeedPanel title="Startup & Business Africa" icon="🌍" feeds={seedStartupFeeds} />
-      </div>
-      <div style={{ gridArea: "aitech" }}>
-        <FeedPanel title="AI & Tech" icon="🤖" feeds={seedAiFeeds} />
-      </div>
-      <div style={{ gridArea: "live" }}>
-        <LiveTvPanel />
-      </div>
-      <div style={{ gridArea: "agenda" }}>
-        <AgendaPanel />
-      </div>
-      <div style={{ gridArea: "country" }}>
-        <CountryIndexPanel />
-      </div>
-      <div style={{ gridArea: "reg" }}>
-        <RegulatoryPanel />
-      </div>
-      <div style={{ gridArea: "funding" }}>
-        <FundingChartPanel />
-      </div>
-      <div style={{ gridArea: "health" }}>
+      <div style={{ gridArea: "health" }} className="min-h-0">
         <SystemHealthPanel />
       </div>
-      <div style={{ gridArea: "notes" }}>
+      <div style={{ gridArea: "macro" }} className="min-h-0">
+        <MacroPanel />
+      </div>
+      <div style={{ gridArea: "notes" }} className="min-h-0">
         <NotesPanel />
+      </div>
+      <div style={{ gridArea: "startup" }} className="min-h-0">
+        <FeedPanel title="Startup & Business Africa" icon="🌍" feeds={seedStartupFeeds} />
+      </div>
+      <div style={{ gridArea: "aitech" }} className="min-h-0">
+        <FeedPanel title="AI & Tech" icon="🤖" feeds={seedAiFeeds} />
+      </div>
+      <div style={{ gridArea: "live" }} className="min-h-0">
+        <LiveTvPanel />
+      </div>
+      <div style={{ gridArea: "country" }} className="min-h-0">
+        <CountryIndexPanel />
+      </div>
+      <div style={{ gridArea: "agenda" }} className="min-h-0">
+        <AgendaPanel />
+      </div>
+      <div style={{ gridArea: "reg" }} className="min-h-0">
+        <RegulatoryPanel />
+      </div>
+      <div style={{ gridArea: "funding" }} className="min-h-0">
+        <FundingChartPanel />
       </div>
     </div>
   );

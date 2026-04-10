@@ -19,14 +19,14 @@ export const COLORS = {
 } as const;
 
 export const CHANNELS: Channel[] = [
-  { name: "AFRICA 24", embedUrl: "https://www.youtube.com/embed/live_stream?channel=UChjrJe5MRpFJP3QwVJLDKqQ", color: "#F59E0B" },
-  { name: "FRANCE 24", embedUrl: "https://www.youtube.com/embed/live_stream?channel=UCCCPCZNChQdGa9EkATeye4g", color: "#3B82F6" },
-  { name: "BLOOMBERG", embedUrl: "https://www.youtube.com/embed/live_stream?channel=UCIALMKvObZNtJ68-rmLjb5A", color: "#EF4444" },
-  { name: "CNBC", embedUrl: "https://www.youtube.com/embed/live_stream?channel=UCvJJ_dzjViJCoLf5uKUTwoA", color: "#22C55E" },
-  { name: "ALJAZEERA", embedUrl: "https://www.youtube.com/embed/live_stream?channel=UCNye-wNBqNL5ZzHSJj3l8Bg", color: "#D4A853" },
-  { name: "BBC AFRICA", embedUrl: "https://www.youtube.com/embed/live_stream?channel=UCfwJiDW9WrbqSBMPLq2pLMg", color: "#EC4899" },
-  { name: "RFI", embedUrl: "https://www.youtube.com/embed/live_stream?channel=UCt1CUn9bRLBMGeS-PfUmjPA", color: "#A78BFA" },
-  { name: "TV5MONDE", embedUrl: "https://www.youtube.com/embed/live_stream?channel=UCx-xzbnsp4DxsQFFkHJVs5Q", color: "#06B6D4" },
+  { name: "FRANCE 24 FR", channelId: "UCCCPCZNChQdGa9EkATeye4g", color: "#3B82F6" },
+  { name: "AFRICA 24", channelId: "UChjrJe5MRpFJP3QwVJLDKqQ", color: "#F59E0B" },
+  { name: "BLOOMBERG", channelId: "UCIALMKvObZNtJ68-rmLjb5A", color: "#EF4444" },
+  { name: "ALJAZEERA EN", channelId: "UCNye-wNBqNL5ZzHSJj3l8Bg", color: "#D4A853" },
+  { name: "CNBC", channelId: "UCvJJ_dzjViJCoLf5uKUTwoA", color: "#22C55E" },
+  { name: "DW NEWS", channelId: "UCknLrEdhRCp1aegoMqRaCZg", color: "#06B6D4" },
+  { name: "EURONEWS", channelId: "UCW2QcKZiU8aUGg4yxCIditg", color: "#A78BFA" },
+  { name: "TRT WORLD", channelId: "UC7fWeaHhqgM4Lba7jesYrUg", color: "#EC4899" },
 ];
 
 export const EVENT_TYPE_COLORS: Record<string, string> = {

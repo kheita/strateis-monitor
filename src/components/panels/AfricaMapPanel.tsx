@@ -4,8 +4,8 @@ import { LiveDot } from "@/components/ui/LiveDot";
 
 export function AfricaMapPanel() {
   return (
-    <PanelShell title="Africa Ecosystem" icon="🌍" badge={<LiveDot color="#22C55E" />}>
-      <div className="p-2 h-full">
+    <PanelShell title="Africa Ecosystem" icon="🌍" badge={<LiveDot color="#22C55E" />} className="h-full">
+      <div className="h-full min-h-[350px]">
         <AfricaMap />
       </div>
     </PanelShell>

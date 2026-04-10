@@ -24,6 +24,7 @@ export function FeedPanel({ title, icon, feeds }: FeedPanelProps) {
       icon={icon}
       count={feeds.length}
       badge={<LiveDot color="#22C55E" />}
+      className="h-full"
     >
       <div className="overflow-y-auto max-h-[360px]">
         {feeds.map((feed) => (
@@ -32,27 +33,23 @@ export function FeedPanel({ title, icon, feeds }: FeedPanelProps) {
             href={feed.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-3 py-2.5 border-b border-border hover:bg-gold/[0.06] transition-colors"
+            className="block px-3 py-2 border-b border-border transition-all duration-150 hover:bg-gold/[0.04] hover:border-l-2 hover:border-l-gold hover:pl-2.5"
           >
-            <div className="flex items-start gap-2">
-              <div className="flex-1 min-w-0">
-                <p className="text-sm text-text leading-snug line-clamp-2 hover:text-gold transition-colors">
-                  {feed.title}
-                </p>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className="font-mono text-[9px] font-bold text-gold-dim bg-gold/10 px-1.5 py-0.5 rounded">
-                    {feed.source}
-                  </span>
-                  <span className="font-mono text-[9px] text-text-dim">{timeAgo(feed.published_at)}</span>
-                </div>
-              </div>
+            <p className="text-[13px] text-text leading-snug line-clamp-2 hover:text-gold transition-colors">
+              {feed.title}
+            </p>
+            <div className="flex items-center gap-2 mt-1">
+              <span className="font-mono text-[9px] font-bold text-gold-dim bg-gold/10 px-1.5 py-0.5 rounded">
+                {feed.source}
+              </span>
+              <span className="font-mono text-[9px] text-text-dim">{timeAgo(feed.published_at)}</span>
             </div>
             {feed.tags.length > 0 && (
-              <div className="flex gap-1 mt-1.5 flex-wrap">
+              <div className="flex gap-1 mt-1 flex-wrap">
                 {feed.tags.slice(0, 3).map((tag) => (
                   <span
                     key={tag}
-                    className="font-mono text-[9px] text-cyan bg-cyan/10 border border-cyan/25 px-1.5 py-0.5 rounded"
+                    className="font-mono text-[8px] text-cyan bg-cyan/10 border border-cyan/25 px-1 py-0.5 rounded"
                   >
                     {tag}
                   </span>

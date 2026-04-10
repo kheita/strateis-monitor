@@ -8,10 +8,10 @@ export function LiveTvPanel() {
   const active = CHANNELS[activeIdx];
 
   return (
-    <PanelShell title="Live Channels" icon="📺" badge={<LiveDot />}>
+    <PanelShell title="Live Channels" icon="📺" badge={<LiveDot />} className="h-full">
       <div className="flex flex-col h-full">
         {/* Channel tabs */}
-        <div className="flex overflow-x-auto border-b border-border bg-bg-card/30">
+        <div className="flex overflow-x-auto border-b border-border bg-bg-card/30 shrink-0">
           {CHANNELS.map((ch, i) => (
             <button
               key={ch.name}
@@ -29,13 +29,13 @@ export function LiveTvPanel() {
         </div>
 
         {/* Embed area */}
-        <div className="flex-1 min-h-[200px] bg-bg-deep relative">
+        <div className="flex-1 bg-bg-deep relative" style={{ minHeight: 180 }}>
           <iframe
-            key={active.name}
-            src={active.embedUrl}
+            key={active.channelId}
+            src={`https://www.youtube.com/embed/live_stream?channel=${active.channelId}&autoplay=0&mute=1`}
             title={active.name}
-            className="absolute inset-0 w-full h-full"
-            allow="autoplay; encrypted-media"
+            className="absolute inset-0 w-full h-full border-none"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             loading="lazy"
           />
