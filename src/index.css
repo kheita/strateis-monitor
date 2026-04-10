@@ -8,9 +8,14 @@
   --color-bg-deep: #060B14;
   --color-bg-panel: #0B1121;
   --color-bg-card: #0F172A;
+  --color-bg-hover: #1A2332;
+  --color-bg-active: #1E293B;
   --color-border: #1E293B;
+  --color-border-subtle: #1E293B66;
+  --color-border-active: #D4A85340;
   --color-text: #E2E8F0;
   --color-text-dim: #94A3B8;
+  --color-text-muted: #64748B;
   --color-gold: #D4A853;
   --color-gold-dim: #C5952A;
   --color-red: #EF4444;
@@ -45,20 +50,10 @@
     overflow-x: hidden;
   }
 
-  ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--color-bg-deep);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--color-border);
-    border-radius: 3px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-text-dim);
-  }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: var(--color-bg-deep); }
+  ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-text-dim); }
 
   /* Leaflet custom tooltips */
   .monitor-tooltip {

@@ -3,6 +3,10 @@ import { App } from "./App";
 import { DashboardPage } from "./pages/DashboardPage";
 import { FeedsPage } from "./pages/FeedsPage";
 import { AnalyticsPage } from "./pages/AnalyticsPage";
+import { ConsultingPage } from "./pages/ConsultingPage";
+import { OperationsPage } from "./pages/OperationsPage";
+import { ContentPage } from "./pages/ContentPage";
+import { FrameworksPage } from "./pages/FrameworksPage";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +16,10 @@ export const router = createBrowserRouter([
       { index: true, element: <DashboardPage /> },
       { path: "feeds", element: <FeedsPage /> },
       { path: "analytics", element: <AnalyticsPage /> },
+      { path: "consulting", element: <ConsultingPage /> },
+      { path: "ops", element: <OperationsPage /> },
+      { path: "content", element: <ContentPage /> },
+      { path: "frameworks", element: <FrameworksPage /> },
     ],
   },
 ]);
